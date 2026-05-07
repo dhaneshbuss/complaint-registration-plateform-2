@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Complaint Portal</h1>
+  </header>
+
+  <main>
+    <!-- Form Section -->
+    <section class="glass-card">
+      <div class="card-header">
+        <h2 class="card-title">Register Complaint</h2>
+        <p class="card-subtitle">Enter your details and complaint below.</p>
+      </div>
+
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label for="place">Place</label>
+          <input type="text" id="place" name="place" placeholder="City, Country" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="+1 (555) 000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="complaint">Complaint Details</label>
+          <textarea id="complaint" name="complaint" rows="4" placeholder="Describe your complaint here..."
+            required></textarea>
+        </div>
+
+        <div id="aiSection" style="display: none;">
+          <div class="form-group ai-question-group">
+            <label>AI Assistant Question</label>
+            <p id="aiQuestionText" class="ai-question-text">Generating question...</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="aiAnswer">Your Answer</label>
+            <textarea id="aiAnswer" name="aiAnswer" rows="3" placeholder="Please provide your answer here..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn-primary">
+          <span id="btnText">Ask Follow-up Question</span>
+          <span id="loadingSpinner" class="spinner" style="display: none;"></span>
+        </button>
+      </form>
+    </section>
+
+    <div style="text-align: center;">
+      <a href="users.html" class="btn-primary"
+        style="text-decoration: none; display: inline-block; width: auto; padding: 1rem 2rem;">View Registered
+        Complaints</a>
+    </div>
+  </main>
+
+  <div id="toast" class="toast">Success!</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
